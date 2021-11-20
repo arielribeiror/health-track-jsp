@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Health Track - Dashboard</title>
 
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <div
@@ -221,7 +221,7 @@
         <div class="toolbar justify-content-between">
           <div class="d-flex align-items-center">
             <img
-              src="./images/avatar.jpg"
+              src="../images/avatar.jpg"
               class="rounded-circle avatar-sm me-2"
               alt="Ariel Ribeiro"
             />
@@ -1181,7 +1181,7 @@
               aria-selected="false"
             >
               <img
-                src="./images/avatar.jpg"
+                src="../images/avatar.jpg"
                 class="rounded-circle avatar-sm"
                 alt="Ariel Ribeiro"
               />
@@ -1202,6 +1202,6 @@
 	      })
 	    }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
