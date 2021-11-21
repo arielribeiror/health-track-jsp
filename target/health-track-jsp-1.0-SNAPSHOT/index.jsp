@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <%@include file="snippets/modal-login.jsp"%>
+
+    <jsp:include page="./snippets/modal-login.jsp"></jsp:include>
 
     <div class="container d-grid">
       <header>

@@ -10894,6 +10894,11 @@ header {
   grid-row: header;
 }
 
+menu {
+  padding: 0;
+  margin: 0;
+}
+
 .toolbar {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
