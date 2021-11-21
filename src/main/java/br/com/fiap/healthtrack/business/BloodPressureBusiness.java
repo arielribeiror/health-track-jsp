@@ -1,0 +1,55 @@
+package br.com.fiap.healthtrack.business;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.healthtrack.model.BloodPressure;
+
+public class BloodPressureBusiness {
+	List<BloodPressure> bloodPressureList = new ArrayList<>();
+
+	ConnectionManager connectionManager = new ConnectionManager();
+
+	public List<BloodPressure> getAll() {
+		try {
+			PreparedStatement stmt = connectionManager
+					.getConnection()
+					.prepareStatement("SELECT BLOOD_ID, SYSTOLIC_PRESSURE, DIASTOLIC_PRESSURE, ACTUAL_AT FROM T_BLOOD_PRESSURE ORDER BY actual_at DESC");
+			ResultSet result = stmt.executeQuery();
+
+			while (result.next()) {
+				String bloodId = result.getString("BLOOD_ID");
+				int systolicPressure = result.getInt("SYSTOLIC_PRESSURE");
+				int diastolicPressure = result.getInt("DIASTOLIC_PRESSURE");
+				java.sql.Date actualAt = result.getDate("ACTUAL_AT");
+				bloodPressureList.add(new BloodPressure(bloodId, systolicPressure, diastolicPressure, actualAt));
+			}
+			connectionManager.closeConnection();
+		} catch (SQLException e) {
+			System.err.println("Não foi possível realizar o getAll de bloodPressure");
+			e.printStackTrace();
+		}
+		return bloodPressureList;
+	}
+	
+	public void insert(String bloodPressureId, int systolicPressure, int diastolicPressure, java.sql.Date actualAt, String userId) {
+		try {
+			String query = "INSERT INTO T_BLOOD_PRESSURE (BLOOD_ID, SYSTOLIC_PRESSURE, DIASTOLIC_PRESSURE, ACTUAL_AT, T_USER_USER_ID) VALUES (?, ?, ?, ?, ?)";
+			PreparedStatement stmt = connectionManager
+				.getConnection()
+				.prepareStatement(query);
+			stmt.setString(1, bloodPressureId);
+			stmt.setInt(2, systolicPressure);
+			stmt.setInt(3, diastolicPressure);
+			stmt.setDate(4, actualAt);
+			stmt.setString(5, userId);
+			stmt.executeQuery();
+		} catch (SQLException e) {
+			System.err.println("Não foi possível realizar o INSERT de bloodPressure");
+			e.printStackTrace();
+		}
+	}
+}

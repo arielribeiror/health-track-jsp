@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div
     class="modal fade"
-    id="newListItemModal"
+    id="newTrackModal"
     tabindex="-1"
     aria-hidden="true"
 >
@@ -11,7 +11,7 @@
         <button type="button" class="btn-close" aria-label="Close"></button>
       </div>
       <div
-          id="carouselLoginControls"
+          id="carouselNewTrack"
           class="carousel carousel-dark slide"
           data-bs-ride="carousel"
           data-bs-interval="false"
@@ -139,8 +139,8 @@
                 <button
                     type="submit"
                     class="btn btn-secondary btn-lg"
-                    data-bs-target="#carouselLoginControls"
-                    data-bs-slide="next"
+                    data-bs-target="#carouselNewTrack"
+                    id="newTrackCarouselNextBtn"
                 >
                   Próximo
                 </button>
@@ -152,7 +152,7 @@
               <button
                   class="carousel-control-prev text-primary mb-5"
                   type="button"
-                  data-bs-target="#carouselLoginControls"
+                  data-bs-target="#carouselNewTrack"
                   data-bs-slide="prev"
               >
                 <i class="icon icon-chevron icon-flip-y me-2"></i>
@@ -194,6 +194,7 @@
                     type="submit"
                     data-bs-dismiss="modal"
                     class="btn btn-secondary btn-lg"
+                    id="successToastBtn"
                 >
                   Salvar
                 </button>

@@ -3,7 +3,7 @@
   <div class="toolbar justify-content-between">
     <div class="d-flex align-items-center">
       <img
-          src="../images/avatar.jpg"
+          src="../assets/images/avatar.jpg"
           class="rounded-circle avatar-sm me-2"
           alt="Ariel Ribeiro"
       />

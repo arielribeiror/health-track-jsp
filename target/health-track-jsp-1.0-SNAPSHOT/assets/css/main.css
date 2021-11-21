@@ -11047,4 +11047,34 @@ footer {
   background-color: rgba(7, 7, 7, 0.15);
 }
 
+@media (min-width: 1050px) {
+  menu {
+    position: absolute;
+    left: 0;
+    width: 57px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  menu .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  menu .nav .nav-item {
+    margin: 1rem 0;
+  }
+  menu .nav .nav-item:last-of-type {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.toast {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 116px;
+  z-index: 1;
+}
+
 /*# sourceMappingURL=main.css.map */

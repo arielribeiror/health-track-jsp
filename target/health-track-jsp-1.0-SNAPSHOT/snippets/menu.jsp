@@ -38,7 +38,7 @@
           aria-controls="new"
           aria-selected="false"
           data-bs-toggle="modal"
-          data-bs-target="#newListItemModal"
+          data-bs-target="#newTrackModal"
       >
         <i class="icon icon-plus"></i>
       </button>
@@ -69,7 +69,7 @@
           aria-selected="false"
       >
         <img
-            src="../images/avatar.jpg"
+            src="../assets/images/avatar.jpg"
             class="rounded-circle avatar-sm"
             alt="Ariel Ribeiro"
         />

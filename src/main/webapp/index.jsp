@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Health Track</title>
 
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
 
@@ -19,7 +19,7 @@
       <header>
         <div class="toolbar justify-content-center">
           <img
-            src="./images/health-track-logo.svg"
+            src="./assets/images/health-track-logo.svg"
             alt="Health Track Logo"
           />
         </div>

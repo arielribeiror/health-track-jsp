@@ -8,7 +8,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img
-          src="./images/healthy-habit.svg"
+          src="./assets/images/healthy-habit.svg"
           class="d-block w-100"
           style="max-height: 350px"
           alt="Exercícios Físicos"
@@ -24,7 +24,7 @@
     </div>
     <div class="carousel-item">
       <img
-          src="./images/eating-healthy-food.svg"
+          src="./assets/images/eating-healthy-food.svg"
           class="d-block w-100"
           style="max-height: 350px"
           alt="Conte calorias"
@@ -40,7 +40,7 @@
     </div>
     <div class="carousel-item">
       <img
-          src="./images/mental-health.svg"
+          src="./assets/images/mental-health.svg"
           class="d-block w-100"
           style="max-height: 350px"
           alt="Pressão Arterial"
@@ -55,7 +55,7 @@
     </div>
     <div class="carousel-item">
       <img
-          src="./images/diet.svg"
+          src="./assets/images/diet.svg"
           class="d-block w-100"
           style="max-height: 350px"
           alt="Registre seu peso"

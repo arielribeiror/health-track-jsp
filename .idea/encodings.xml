@@ -2,6 +2,19 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/auth/User.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/ActivityBusiness.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/ActivityTypeBusiness.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/BloodPressureBusiness.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/ConnectionManager.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/FoodBusiness.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/FoodTypeBusiness.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/business/WeightBusiness.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/model/Activity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/model/BloodPressure.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/model/Food.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/model/Weight.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/br/com/fiap/healthtrack/model/WhateverDAO.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>

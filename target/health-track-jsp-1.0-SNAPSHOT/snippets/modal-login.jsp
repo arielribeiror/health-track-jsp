@@ -69,7 +69,7 @@
             </div>
             <div class="modal-footer">
               <div class="d-grid w-100">
-                <a href="./dashboard/" class="btn btn-secondary btn-lg">
+                <a href="./home/" class="btn btn-secondary btn-lg">
                   Entrar
                 </a>
               </div>

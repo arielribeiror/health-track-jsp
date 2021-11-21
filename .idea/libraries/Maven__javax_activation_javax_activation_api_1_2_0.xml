@@ -2,6 +2,7 @@
   <library name="Maven: javax.activation:javax.activation-api:1.2.0">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../health-track-backend/lib/ojdbc11.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-javadoc.jar!/" />
