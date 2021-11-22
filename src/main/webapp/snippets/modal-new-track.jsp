@@ -18,17 +18,17 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="modal-body" style="height: calc(100vh - 160px)">
+            <div class="modal-body" style="height: calc(100vh - 210px)">
               <div class="text-center mb-4">
                 <span class="fs-2 fw-bold">O que deseja registrar?</span>
               </div>
-              <form>
+              <form id="trackTypeForm">
                 <div class="position-relative">
                   <input
                       class="form-check-input"
                       type="radio"
-                      name="list-option"
-                      id="weight-option"
+                      name="listOption"
+                      id="weightOption"
                   />
                   <label
                       class="
@@ -38,7 +38,7 @@
                           align-items-center
                           p-3
                         "
-                      for="weight-option"
+                      for="weightOption"
                   >
                     <div class="d-flex flex-column me-3">
                       <span class="fs-3 fw-bold">Peso</span>
@@ -54,8 +54,8 @@
                   <input
                       class="form-check-input"
                       type="radio"
-                      name="list-option"
-                      id="food-option"
+                      name="listOption"
+                      id="foodOption"
                   />
                   <label
                       class="
@@ -65,7 +65,7 @@
                           align-items-center
                           p-3
                         "
-                      for="food-option"
+                      for="foodOption"
                   >
                     <div class="d-flex flex-column me-3">
                       <span class="fs-3 fw-bold">Alimentação</span>
@@ -82,8 +82,8 @@
                   <input
                       class="form-check-input"
                       type="radio"
-                      name="list-option"
-                      id="pressure-option"
+                      name="listOption"
+                      id="pressureOption"
                   />
                   <label
                       class="
@@ -93,7 +93,7 @@
                           align-items-center
                           p-3
                         "
-                      for="pressure-option"
+                      for="pressureOption"
                   >
                     <div class="d-flex flex-column me-3">
                       <span class="fs-3 fw-bold">Pressão Arterial</span>
@@ -109,8 +109,8 @@
                   <input
                       class="form-check-input"
                       type="radio"
-                      name="list-option"
-                      id="exercise-option"
+                      name="listOption"
+                      id="exerciseOption"
                   />
                   <label
                       class="
@@ -120,7 +120,7 @@
                           align-items-center
                           p-3
                         "
-                      for="exercise-option"
+                      for="exerciseOption"
                   >
                     <div class="d-flex flex-column me-3">
                       <span class="fs-3 fw-bold">Exercício Físico</span>
@@ -140,15 +140,24 @@
                     type="submit"
                     class="btn btn-secondary btn-lg"
                     data-bs-target="#carouselNewTrack"
+                    data-bs-slide="next"
                     id="newTrackCarouselNextBtn"
                 >
                   Próximo
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-lg"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                  Fechar
                 </button>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="modal-body" style="height: calc(100vh - 160px)">
+            <div class="modal-body" style="height: calc(100vh - 210px)">
               <button
                   class="carousel-control-prev text-primary mb-5"
                   type="button"
@@ -158,35 +167,15 @@
                 <i class="icon icon-chevron icon-flip-y me-2"></i>
                 <span>Voltar</span>
               </button>
-              <div class="d-flex align-items-center text-primary mb-4">
-                <i class="icon icon-body-weight icon-36 me-4"></i>
-                <span class="fs-3 fw-bold">Peso</span>
-              </div>
-              <form>
-                <div class="mb-3">
-                  <label for="listItemWeight" class="form-label">
-                    Digite o peso em Kg
-                  </label>
-                  <input
-                      type="number"
-                      step="0.1"
-                      id="listItemWeight"
-                      class="form-control form-control-lg"
-                      placeholder="Digite seu peso atual"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="listItemWeightDate" class="form-label">
-                    Data
-                  </label>
-                  <input
-                      type="date"
-                      id="listItemWeightDate"
-                      class="form-control form-control-lg"
-                      placeholder="Selecione a data"
-                  />
-                </div>
-              </form>
+
+              <jsp:include page="form-weight.jsp"></jsp:include>
+
+              <jsp:include page="form-food.jsp"></jsp:include>
+
+              <jsp:include page="form-pressure.jsp"></jsp:include>
+
+              <jsp:include page="form-activity.jsp"></jsp:include>
+
             </div>
             <div class="modal-footer">
               <div class="d-grid w-100">
@@ -194,9 +183,17 @@
                     type="submit"
                     data-bs-dismiss="modal"
                     class="btn btn-secondary btn-lg"
-                    id="successToastBtn"
+                    id="trackAddBtn"
                 >
                   Salvar
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-lg"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                  Fechar
                 </button>
               </div>
             </div>

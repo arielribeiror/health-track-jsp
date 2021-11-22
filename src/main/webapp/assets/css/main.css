@@ -11077,4 +11077,8 @@ footer {
   z-index: 1;
 }
 
+.form-select option:first-of-type {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
