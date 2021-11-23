@@ -5,7 +5,7 @@
     role="tabpanel"
     aria-labelledby="exercise-tab"
 >
-  <div class="list-group list-group-flush">
+  <div class="list-group list-group-flush" id="activityList">
     <button
         type="button"
         class="

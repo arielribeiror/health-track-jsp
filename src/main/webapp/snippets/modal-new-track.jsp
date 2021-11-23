@@ -110,7 +110,7 @@
                       class="form-check-input"
                       type="radio"
                       name="listOption"
-                      id="exerciseOption"
+                      id="activityOption"
                   />
                   <label
                       class="
@@ -120,7 +120,7 @@
                           align-items-center
                           p-3
                         "
-                      for="exerciseOption"
+                      for="activityOption"
                   >
                     <div class="d-flex flex-column me-3">
                       <span class="fs-3 fw-bold">Exercício Físico</span>

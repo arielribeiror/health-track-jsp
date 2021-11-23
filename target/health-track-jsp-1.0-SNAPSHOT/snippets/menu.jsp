@@ -4,7 +4,7 @@
     <li class="nav-item" role="presentation">
       <button
           class="nav-link active"
-          id="home-tab"
+          id="homeTab"
           data-bs-toggle="tab"
           data-bs-target="#home"
           type="button"
@@ -18,7 +18,7 @@
     <li class="nav-item" role="presentation">
       <button
           class="nav-link"
-          id="tracking-tab"
+          id="trackingTab"
           data-bs-toggle="tab"
           data-bs-target="#tracking"
           type="button"
@@ -32,7 +32,7 @@
     <li class="nav-item" role="presentation">
       <button
           class="btn btn-icon btn-md btn-secondary"
-          id="new-tab"
+          id="newTab"
           type="button"
           role="tab"
           aria-controls="new"
@@ -46,7 +46,7 @@
     <li class="nav-item" role="presentation">
       <button
           class="nav-link"
-          id="report-tab"
+          id="reportTab"
           data-bs-toggle="tab"
           data-bs-target="#report"
           type="button"
@@ -60,7 +60,7 @@
     <li class="nav-item" role="presentation">
       <button
           class="nav-link rounded-circle"
-          id="profile-tab"
+          id="profileTab"
           data-bs-toggle="tab"
           data-bs-target="#profile"
           type="button"

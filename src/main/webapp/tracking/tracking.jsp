@@ -16,6 +16,6 @@
 
     <jsp:include page="tab-pressure.jsp"></jsp:include>
 
-    <jsp:include page="tab-exercise.jsp"></jsp:include>
+    <jsp:include page="tab-activity.jsp"></jsp:include>
   </div>
 </div>

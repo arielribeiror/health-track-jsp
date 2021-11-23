@@ -25,7 +25,7 @@
     <section class="h-100">
       <div class="tab-content h-100" id="tabnavContent">
 
-        <jsp:include page="dashboard.jsp"></jsp:include>
+        <jsp:include page="../home/dashboard.jsp"></jsp:include>
 
         <jsp:include page="../tracking/tracking.jsp"></jsp:include>
 

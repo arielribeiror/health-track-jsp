@@ -5,7 +5,7 @@
     role="tabpanel"
     aria-labelledby="weight-tab"
 >
-  <div class="list-group list-group-flush">
+  <div class="list-group list-group-flush" id="weightList">
     <button
         type="button"
         class="
