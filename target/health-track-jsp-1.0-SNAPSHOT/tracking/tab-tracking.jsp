@@ -3,7 +3,7 @@
   <li class="nav-item" role="presentation">
     <button
         class="nav-link active d-flex align-items-center"
-        id="weight-tab"
+        id="weightTabBtn"
         data-bs-toggle="tab"
         data-bs-target="#weightTab"
         type="button"
@@ -18,7 +18,7 @@
   <li class="nav-item" role="presentation">
     <button
         class="nav-link d-flex align-items-center"
-        id="food-tab"
+        id="foodTabBtn"
         data-bs-toggle="tab"
         data-bs-target="#foodTab"
         type="button"
@@ -33,7 +33,7 @@
   <li class="nav-item" role="presentation">
     <button
         class="nav-link d-flex align-items-center"
-        id="pressure-tab"
+        id="pressureTabBtn"
         data-bs-toggle="tab"
         data-bs-target="#pressureTab"
         type="button"
@@ -48,12 +48,12 @@
   <li class="nav-item" role="presentation">
     <button
         class="nav-link d-flex align-items-center"
-        id="exercise-tab"
+        id="activityTabBtn"
         data-bs-toggle="tab"
-        data-bs-target="#exerciseTab"
+        data-bs-target="#activityTab"
         type="button"
         role="tab"
-        aria-controls="exercise"
+        aria-controls="activity"
         aria-selected="false"
     >
       <i class="icon icon-flash me-2"></i>
