@@ -36,16 +36,16 @@ public class FoodBusiness {
 		return foodList;
 	}
 	
-	public void insert(String foodId, String description, int caloricGain, java.sql.Date actualAt, String userId) {
+	public void insert(Food food, String userId) {
 		try {
 			String query = "INSERT INTO T_FOOD (FOOD_ID, DESCRIPTION, CALORIC_GAIN, ACTUAL_AT, T_USER_USER_ID) VALUES (?, ?, ?, ?, ?)";
 			PreparedStatement stmt = connectionManager
 				.getConnection()
 				.prepareStatement(query);
-			stmt.setString(1, foodId);
-			stmt.setString(2, description);
-			stmt.setInt(3, caloricGain);
-			stmt.setDate(4, actualAt);
+			stmt.setString(1, food.getFoodId());
+			stmt.setString(2, food.getDescription());
+			stmt.setInt(3, food.getCaloricGain());
+			stmt.setDate(4, food.getActualAt());
 			stmt.setString(5, userId);
 			stmt.executeQuery();
 		} catch (SQLException e) {

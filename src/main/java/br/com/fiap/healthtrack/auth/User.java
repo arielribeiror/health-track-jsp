@@ -71,6 +71,10 @@ public class User {
 		this.enable = enable;
 	}
 
+  public User() {
+
+  }
+
 	/**
 	 * Add user method
 	 */

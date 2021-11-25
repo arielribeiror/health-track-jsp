@@ -24,40 +24,30 @@ public class Weight {
     this.actualAt = actualAt;
   }
 
-  /**
-   * Get weight
-   */
-  public void addWeight() {
-    System.out.println(String.format("Novo peso, de %sKg, foi adicionado com sucesso!", weight));
+  public Weight() {}
+
+  public String getWeightId() {
+    return weightId;
   }
 
-  /**
-   * Get weight by id
-   *
-   * @param weightId to check uniqueness
-   * @return weight to user register
-   */
-  public Double getWeightById(String weightId) {
-    if (weightId != this.weightId) {
-      System.out.println("Peso não encontrado");
-    } else {
-      System.out.println(String.format("Peso de %sKg encontrado!", weight));
-    }
+  public void setWeightId(String weightId) {
+    this.weightId = weightId;
+  }
+
+  public Double getWeight() {
     return weight;
   }
 
-  /**
-   * Edit weight
-   *
-   * @param weightId to check uniqueness
-   * @param weight   to user register
-   */
-  public void editWeight(String weightId, Double weight) {
-    if (weightId != this.weightId) {
-      System.out.println("Peso não encontrado");
-    } else {
-      System.out.println("Peso alterado com sucesso!");
-    }
+  public void setWeight(Double weight) {
+    this.weight = weight;
+  }
+
+  public Date getActualAt() {
+    return actualAt;
+  }
+
+  public void setActualAt(Date actualAt) {
+    this.actualAt = actualAt;
   }
 
   @Override

@@ -4,7 +4,7 @@
     <i class="icon icon-flash icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Exercício Físico</span>
   </div>
-  <form>
+  <form id="activityForm">
     <div class="mb-3">
       <label for="caloricLoss" class="form-label">
         Gasto calórico
@@ -27,9 +27,6 @@
           class="form-select form-select-lg"
       >
         <option selected>Selecione o tipo de atividade</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
       </select>
     </div>
     <div class="mb-3">

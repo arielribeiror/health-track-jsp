@@ -4,7 +4,7 @@
     <i class="icon icon-body-weight icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Peso</span>
   </div>
-  <form>
+  <form id="weightForm">
     <div class="mb-3">
       <label for="weight" class="form-label">
         Digite o peso em Kg

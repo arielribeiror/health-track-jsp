@@ -43,60 +43,48 @@ public class Food {
     this.description = description;
   }
 
-  /**
-   * Get food
-   */
-  public void addFood() {
-    System.out.println(String.format("%s, em %s, com o ganho calórico de %s, foi adicionado com sucesso!",
-        description, type, caloricGain));
+  public Food() {
+
   }
 
-  /**
-   * Get food by id
-   *
-   * @param foodId to check uniqueness
-   * @return description to identify food
-   */
-  public String getFoodById(String foodId) {
-    if (foodId != this.foodId) {
-      System.out.println("Alimento não encontrado");
-    } else {
-      System.out.println(String.format("%s, em %s, encontrado!", description, type));
-    }
+  public String getFoodId() {
+    return foodId;
+  }
+
+  public void setFoodId(String foodId) {
+    this.foodId = foodId;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  public int getCaloricGain() {
+    return caloricGain;
+  }
+
+  public void setCaloricGain(int caloricGain) {
+    this.caloricGain = caloricGain;
+  }
+
+  public Date getActualAt() {
+    return actualAt;
+  }
+
+  public void setActualAt(Date actualAt) {
+    this.actualAt = actualAt;
+  }
+
+  public String getDescription() {
     return description;
   }
 
-  /**
-   * Get foods by Type
-   *
-   * @param type to food classify
-   * @return description to identify food
-   */
-  public String getFoodsByType(String type) {
-    if (type != this.type) {
-      System.out.println("Não encontramos alimentos com esse tipo");
-    } else {
-      System.out.println(String.format("%s, em %s, foram encontrados!", description, type));
-    }
-    return description;
-  }
-
-  /**
-   * Edit food
-   *
-   * @param foodId      to check uniqueness
-   * @param type        to food classify
-   * @param caloricGain to user caloric gain
-   * @param actualAt    to date time register
-   * @param description to identify food
-   */
-  public void editFood(String foodId, String type, int caloricGain, Date actualAt, String description) {
-    if (foodId != this.foodId) {
-      System.out.println("Alimento não encontrado");
-    } else {
-      System.out.println(String.format("%s, em %s, com o ganho calórico de %s, foi alterado com sucesso!",
-          description, type, caloricGain));
-    }
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   @Override

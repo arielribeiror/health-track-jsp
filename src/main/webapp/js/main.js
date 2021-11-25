@@ -11,28 +11,28 @@ const contextPath = window.location.pathname.substring(0, window.location.pathna
  */
 let weightList
 const trackingTab = document.querySelector('#trackingTab')
-trackingTab.addEventListener('click', function () {
-  if (!weightList) {
-    ajax.open("GET", contextPath + '/weight', true);
-    ajax.send();
-    ajax.onreadystatechange = function () {
-      if (ajax.readyState == 4 && ajax.status == 200) {
-        weightList = JSON.parse(ajax.responseText);
-        const weightListEl = document.querySelector('#weightList')
-        let previousValue = null
-        weightList.reverse()
-        weightList.forEach((weightItem, i) => {
-          const currentValue = weightList[i].weight
-          if (previousValue > 0) {
-            weightList[i] = Object.assign(weightList[i], {
-              compare: currentValue - previousValue
-            })
-          }
-          previousValue = currentValue
-        })
-        weightList.reverse()
-        weightListEl.innerHTML = (weightList.map(weightItem => {
-          return `<button
+
+function getWeightList() {
+  ajax.open("GET", contextPath + '/weight', true);
+  ajax.send();
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      weightList = JSON.parse(ajax.responseText);
+      const weightListEl = document.querySelector('#weightList')
+      let previousValue = null
+      weightList.reverse()
+      weightList.forEach((weightItem, i) => {
+        const currentValue = weightList[i].weight
+        if (previousValue > 0) {
+          weightList[i] = Object.assign(weightList[i], {
+            compare: currentValue - previousValue
+          })
+        }
+        previousValue = currentValue
+      })
+      weightList.reverse()
+      weightListEl.innerHTML = (weightList.map(weightItem => {
+        return `<button
         id="weightListBtn"
         type="button"
         class="
@@ -56,9 +56,14 @@ trackingTab.addEventListener('click', function () {
         </div>
       </div>
     </button>`
-        })).join('')
-      }
+      })).join('')
     }
+  }
+}
+
+trackingTab.addEventListener('click', function () {
+  if (!weightList) {
+    getWeightList();
   }
 })
 
@@ -67,16 +72,16 @@ trackingTab.addEventListener('click', function () {
  */
 let foodList
 const foodTabBtn = document.querySelector('#foodTabBtn')
-foodTabBtn.addEventListener('click', function () {
-  if (!foodList) {
-    ajax.open("GET", contextPath + '/food', true);
-    ajax.send();
-    ajax.onreadystatechange = function () {
-      if (ajax.readyState == 4 && ajax.status == 200) {
-        foodList = JSON.parse(ajax.responseText);
-        const foodListEl = document.querySelector('#foodList')
-        foodListEl.innerHTML = (foodList.map(foodItem => {
-          return `<button
+
+function getFoodList() {
+  ajax.open("GET", contextPath + '/food', true);
+  ajax.send();
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      foodList = JSON.parse(ajax.responseText);
+      const foodListEl = document.querySelector('#foodList')
+      foodListEl.innerHTML = (foodList.map(foodItem => {
+        return `<button
         type="button"
         class="
                         list-group-item list-group-item-action
@@ -90,7 +95,7 @@ foodTabBtn.addEventListener('click', function () {
           <span class="fs-2 fw-bold">${foodItem.caloricGain}</span>
           <span class="small ms-1">cal</span>
         </div>
-        <span class="text-gray text-truncate">${foodItem.type}</span>
+        <span class="text-gray text-truncate">${foodItem.description}</span>
       </div>
       <div class="d-flex align-items-center">
         <span class="text-gray">${foodItem.actualAt}</span>
@@ -99,9 +104,14 @@ foodTabBtn.addEventListener('click', function () {
         </div>
       </div>
     </button>`
-        })).join('')
-      }
+      })).join('')
     }
+  }
+}
+
+foodTabBtn.addEventListener('click', function () {
+  if (!foodList) {
+    getFoodList();
   }
 })
 
@@ -110,16 +120,16 @@ foodTabBtn.addEventListener('click', function () {
  */
 let pressureList
 const pressureTabBtn = document.querySelector('#pressureTabBtn')
-pressureTabBtn.addEventListener('click', function () {
-  if (!pressureList) {
-    ajax.open("GET", contextPath + '/blood-pressure', true);
-    ajax.send();
-    ajax.onreadystatechange = function () {
-      if (ajax.readyState == 4 && ajax.status == 200) {
-        pressureList = JSON.parse(ajax.responseText);
-        const pressureListEl = document.querySelector('#pressureList')
-        pressureListEl.innerHTML = (pressureList.map(pressureItem => {
-          return `<button
+
+function getPressureList() {
+  ajax.open("GET", contextPath + '/blood-pressure', true);
+  ajax.send();
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      pressureList = JSON.parse(ajax.responseText);
+      const pressureListEl = document.querySelector('#pressureList')
+      pressureListEl.innerHTML = (pressureList.map(pressureItem => {
+        return `<button
         type="button"
         class="
                         list-group-item list-group-item-action
@@ -141,9 +151,14 @@ pressureTabBtn.addEventListener('click', function () {
         </div>
       </div>
     </button>`
-        })).join('')
-      }
+      })).join('')
     }
+  }
+}
+
+pressureTabBtn.addEventListener('click', function () {
+  if (!pressureList) {
+    getPressureList();
   }
 })
 
@@ -152,16 +167,16 @@ pressureTabBtn.addEventListener('click', function () {
  */
 let activityList
 const activityTabBtn = document.querySelector('#activityTabBtn')
-activityTabBtn.addEventListener('click', function () {
-  if (!activityList) {
-    ajax.open("GET", contextPath + '/activity', true);
-    ajax.send();
-    ajax.onreadystatechange = function () {
-      if (ajax.readyState == 4 && ajax.status == 200) {
-        activityList = JSON.parse(ajax.responseText);
-        const activityListEl = document.querySelector('#activityList')
-        activityListEl.innerHTML = (activityList.map(activityItem => {
-          return `<button
+
+function getActivityList() {
+  ajax.open("GET", contextPath + '/activity', true);
+  ajax.send();
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      activityList = JSON.parse(ajax.responseText);
+      const activityListEl = document.querySelector('#activityList')
+      activityListEl.innerHTML = (activityList.map(activityItem => {
+        return `<button
         type="button"
         class="
                         list-group-item list-group-item-action
@@ -184,9 +199,14 @@ activityTabBtn.addEventListener('click', function () {
         </div>
       </div>
     </button>`
-        })).join('')
-      }
+      })).join('')
     }
+  }
+}
+
+activityTabBtn.addEventListener('click', function () {
+  if (!activityList) {
+    getActivityList();
   }
 })
 
@@ -216,12 +236,14 @@ for (const trackListOption of trackListOptions) {
           weightFormTrack.style.display = 'block'
           break
         case 'foodOption':
+          getFoodType()
           foodFormTrack.style.display = 'block'
           break
         case 'pressureOption':
           pressureFormTrack.style.display = 'block'
           break
         case 'activityOption':
+          getActivityType()
           activityFormTrack.style.display = 'block'
           break
       }
@@ -240,12 +262,172 @@ newTrackModal.addEventListener('hidden.bs.modal', function (event) {
 })
 
 /**
- * Toast Message
+ * Food Type List (Select Options)
+ */
+function getFoodType() {
+  let foodTypeList
+  if (!foodTypeList) {
+    ajax.open("GET", contextPath + '/food-type', true);
+    ajax.send();
+    ajax.onreadystatechange = function () {
+      if (ajax.readyState === 4 && ajax.status === 200) {
+        foodTypeList = JSON.parse(ajax.responseText);
+        const foodType = document.querySelector('#foodType')
+        foodTypeList.forEach(foodTypeItem => {
+          foodType.options[foodType.options.length] = new Option(foodTypeItem.type, foodTypeItem.typeId)
+        })
+      }
+    }
+  }
+}
+
+/**
+ * Activity Type List (Select Options)
+ */
+function getActivityType() {
+  let activityTypeList
+  if (!activityTypeList) {
+    ajax.open("GET", contextPath + '/activity-type', true);
+    ajax.send();
+    ajax.onreadystatechange = function () {
+      if (ajax.readyState === 4 && ajax.status === 200) {
+        activityTypeList = JSON.parse(ajax.responseText);
+        const activityType = document.querySelector('#activityType')
+        activityTypeList.forEach(activityTypeItem => {
+          activityType.options[activityType.options.length] = new Option(activityTypeItem.type, activityTypeItem.typeId)
+        })
+      }
+    }
+  }
+}
+
+/**
+ * New Track Save
  * */
 const trackAddBtn = document.querySelector('#trackAddBtn')
 const toastMessage = document.querySelector('#successToast')
 toastMessage.style.display = 'none'
 trackAddBtn.addEventListener('click', function () {
+  for (const trackListOption of trackListOptions) {
+    if (trackListOption.checked) {
+      switch (trackListOption.id) {
+        case 'weightOption':
+          postWeight()
+          break
+        case 'foodOption':
+          postFood()
+          break
+        case 'pressureOption':
+          postPressure()
+          break
+        case 'activityOption':
+          postActivity()
+          break
+      }
+    }
+  }
+
+  toastMessage.style.display = 'block'
   const toast = new bootstrap.Toast(toastMessage)
   toast.show()
 })
+
+/**
+ * FormData to JSON Converter
+ * @param formData
+ * @returns {{}}
+ */
+function formDataToJson(formData) {
+  let object = {};
+  formData.forEach((value, key) => {
+    if (!Reflect.has(object, key)) {
+      object[key] = value;
+      return;
+    }
+    if (!Array.isArray(object[key])) {
+      object[key] = [object[key]];
+    }
+    object[key].push(value);
+  });
+  return object;
+}
+
+function jsonRequestHeaders() {
+  ajax.setRequestHeader("Content-type", "application/json");
+}
+
+/**
+ * New Weight Track (POST)
+ */
+
+function postWeight() {
+  const formData = new FormData(document.querySelector('#weightForm'))
+  let object = formDataToJson(formData);
+  ajax.open("POST", contextPath + '/weight', true);
+  jsonRequestHeaders();
+  ajax.send(JSON.stringify(object));
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      const weightItem = JSON.parse(ajax.responseText)
+      console.log(weightItem)
+      getWeightList()
+    }
+  }
+}
+
+/**
+ * New Food Track (POST)
+ */
+
+function postFood() {
+  const formData = new FormData(document.querySelector('#foodForm'))
+  let object = formDataToJson(formData);
+  ajax.open("POST", contextPath + '/food', true);
+  jsonRequestHeaders();
+  ajax.send(JSON.stringify(object));
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      const foodItem = JSON.parse(ajax.responseText)
+      console.log(foodItem)
+      getFoodList()
+    }
+  }
+}
+
+/**
+ * New Blood Pressure Track (POST)
+ */
+
+function postPressure() {
+  const formData = new FormData(document.querySelector('#pressureForm'))
+  let object = formDataToJson(formData);
+  ajax.open("POST", contextPath + '/blood-pressure', true);
+  jsonRequestHeaders();
+  ajax.send(JSON.stringify(object));
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      const pressureItem = JSON.parse(ajax.responseText)
+      console.log(pressureItem)
+      getPressureList()
+    }
+  }
+}
+
+/**
+ * New Activity Track (POST)
+ */
+
+function postActivity() {
+  const formData = new FormData(document.querySelector('#activityForm'))
+  let object = formDataToJson(formData);
+  ajax.open("POST", contextPath + '/activity', true);
+  jsonRequestHeaders();
+  ajax.send(JSON.stringify(object));
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      const activityItem = JSON.parse(ajax.responseText)
+      console.log(activityItem)
+      getActivityList()
+    }
+  }
+}

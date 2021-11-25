@@ -4,7 +4,7 @@
     <i class="icon icon-chicken-leg icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Alimentação</span>
   </div>
-  <form>
+  <form id="foodForm">
     <div class="mb-3">
       <label for="caloricGain" class="form-label">
         Calorias
@@ -27,9 +27,6 @@
           class="form-select form-select-lg"
       >
         <option selected>Selecione o tipo da refeição</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
       </select>
     </div>
     <div class="mb-3">

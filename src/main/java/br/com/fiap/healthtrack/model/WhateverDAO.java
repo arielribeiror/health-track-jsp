@@ -141,16 +141,16 @@ public class WhateverDAO {
     Calendar calendar = Calendar.getInstance();
     java.util.Date currentDate = calendar.getTime();
     java.sql.Date date = new java.sql.Date(currentDate.getTime());
-    foodBusiness.insert("2058df6c-b6a0-44d6-a32e-edffc0542817", "Ovos mexidos e um mamão inteiro", 180, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    foodBusiness.insert("27190d39-d598-49e8-8207-2395b815fc2a", "Arroz, feijão, bife e batata frita", 870, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    foodBusiness.insert("1e9cf13b-39f4-41f4-8d52-7262126a157b", "Pães com Nutella", 330, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    foodBusiness.insert("0585903b-832a-4f7a-b21b-d215e6b0f3aa", "Crepioca com presunto e queijo", 695, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    foodBusiness.insert("ce430821-27db-46b0-8ba3-a0131cbf0b96", "Banana com aveia", 145, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    foodBusiness.insert("2058df6c-b6a0-44d6-a32e-edffc0542817", "Ovos mexidos e um mamão inteiro", 180, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    foodBusiness.insert("27190d39-d598-49e8-8207-2395b815fc2a", "Arroz, feijão, bife e batata frita", 870, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    foodBusiness.insert("1e9cf13b-39f4-41f4-8d52-7262126a157b", "Pães com Nutella", 330, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    foodBusiness.insert("0585903b-832a-4f7a-b21b-d215e6b0f3aa", "Crepioca com presunto e queijo", 695, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    foodBusiness.insert("ce430821-27db-46b0-8ba3-a0131cbf0b96", "Banana com aveia", 145, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
   }
 
   public static void insertFoodType(FoodTypeBusiness foodTypeBusiness) {
@@ -173,11 +173,11 @@ public class WhateverDAO {
     Calendar calendar = Calendar.getInstance();
     java.util.Date currentDate = calendar.getTime();
     java.sql.Date date = new java.sql.Date(currentDate.getTime());
-    weightBusiness.insert("a7ef5e7b-4a48-4d09-ab90-001286b71000", 61.5, date, "0375dabf-2a75-4083-90df-c8649b77d861");
-    weightBusiness.insert("f857c52a-755e-45f4-908e-aa3fcf8a1acf", 62.8, date, "0375dabf-2a75-4083-90df-c8649b77d861");
-    weightBusiness.insert("74adc025-9456-4afb-a139-eeb61a28fa82", 59.8, date, "0375dabf-2a75-4083-90df-c8649b77d861");
-    weightBusiness.insert("86fc0548-4e4a-4668-a7ea-e545916e5824", 60.5, date, "0375dabf-2a75-4083-90df-c8649b77d861");
-    weightBusiness.insert("0863268f-391f-44e2-aa52-119bdbae99ba", 59.9, date, "0375dabf-2a75-4083-90df-c8649b77d861");
+//    weightBusiness.insert("a7ef5e7b-4a48-4d09-ab90-001286b71000", 61.5, date, "0375dabf-2a75-4083-90df-c8649b77d861");
+//    weightBusiness.insert("f857c52a-755e-45f4-908e-aa3fcf8a1acf", 62.8, date, "0375dabf-2a75-4083-90df-c8649b77d861");
+//    weightBusiness.insert("74adc025-9456-4afb-a139-eeb61a28fa82", 59.8, date, "0375dabf-2a75-4083-90df-c8649b77d861");
+//    weightBusiness.insert("86fc0548-4e4a-4668-a7ea-e545916e5824", 60.5, date, "0375dabf-2a75-4083-90df-c8649b77d861");
+//    weightBusiness.insert("0863268f-391f-44e2-aa52-119bdbae99ba", 59.9, date, "0375dabf-2a75-4083-90df-c8649b77d861");
   }
 
 }

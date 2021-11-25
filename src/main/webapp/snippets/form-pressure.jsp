@@ -4,7 +4,7 @@
     <i class="icon icon-heart-beats icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Pressão Arterial</span>
   </div>
-  <form>
+  <form id="pressureForm">
     <div class="mb-3">
       <label for="systolic" class="form-label">
         Pressão Sistólica

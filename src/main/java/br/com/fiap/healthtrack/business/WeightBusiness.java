@@ -34,17 +34,18 @@ public class WeightBusiness {
 		return weightList;
 	}
 	
-	public void insert(String weightId, Double weight, java.sql.Date actualAt, String userId) {
+	public void insert(Weight weight, String userId) {
 		try {
 			String query = "INSERT INTO T_WEIGHT (WEIGHT_ID, WEIGHT, ACTUAL_AT, T_USER_USER_ID) VALUES (?, ?, ?, ?)";
 			PreparedStatement stmt = connectionManager
 				.getConnection()
 				.prepareStatement(query);
-			stmt.setString(1, weightId);
-			stmt.setDouble(2, weight);
-			stmt.setDate(3, actualAt);
+			stmt.setString(1, weight.getWeightId());
+			stmt.setDouble(2, weight.getWeight());
+			stmt.setDate(3, weight.getActualAt());
 			stmt.setString(4, userId);
 			stmt.executeQuery();
+			connectionManager.closeConnection();
 		} catch (SQLException e) {
 			System.err.println("Não foi possível realizar o INSERT de weight");
 			e.printStackTrace();
