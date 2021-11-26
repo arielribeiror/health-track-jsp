@@ -1,0 +1,4 @@
+TO DO
+- impedir request de post enquanto os forms estiverem inválidos para não retornar 500
+- integrar dashboard
+- usuário e autenticação

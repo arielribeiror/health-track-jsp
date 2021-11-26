@@ -1,153 +1,141 @@
 package br.com.fiap.healthtrack.auth;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 /**
- * 
  * @author Grupo 23
  * @version 1.0
  */
 public class User {
-	/**
-	 * User Id to uniqueness
-	 */
-	private String userId;
-	/**
-	 * User first name
-	 */
-	private String firstName;
-	/**
-	 * User last name
-	 */
-	private String lastName;
-	/**
-	 * User birthday
-	 */
-	private LocalDate birthday;
-	/**
-	 * User email
-	 */
-	private String email;
-	/**
-	 * User username (login)
-	 */
-	String username;
-	/**
-	 * User password
-	 */
-	String password;
-	/**
-	 * User image to avatar
-	 */
-	private String image;
-	/**
-	 * User availability status in the application
-	 */
-	private Boolean enable;
+  /**
+   * User Id to uniqueness
+   */
+  private String userId;
+  /**
+   * User first name
+   */
+  private String firstName;
+  /**
+   * User last name
+   */
+  private String lastName;
+  /**
+   * User birthday
+   */
+  private Date birthday;
+  /**
+   * User email
+   */
+  private String email;
+  /**
+   * User username (login)
+   */
+  private String username;
+  /**
+   * User password
+   */
+  private String password;
+  /**
+   * User image to avatar
+   */
+  private String image;
+  /**
+   * User availability status in the application
+   */
+  private Boolean enable;
 
-	/**
-	 * User Constructor
-	 * 
-	 * @param userId    to uniqueness
-	 * @param firstName to user first name
-	 * @param lastName  to user last name
-	 * @param birthday  to user birthday
-	 * @param email     to user email
-	 * @param username  to user username and uniqueness
-	 * @param password  to user password and security
-	 * @param image     to user image profile avatar
-	 * @param enable    to user activate or deactivate
-	 */
-	public User(String userId, String firstName, String lastName, LocalDate birthday, String email, String username,
-			String password, String image, Boolean enable) {
-		this.userId = userId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthday = birthday;
-		this.email = email;
-		this.username = username;
-		this.password = password;
-		this.image = image;
-		this.enable = enable;
-	}
+  private String gender;
+
+  private Double height;
 
   public User() {
-
   }
 
-	/**
-	 * Add user method
-	 */
-	public void addUser() {
-		System.out.println(
-				String.format("%s, com o username %s, foi criado com sucesso!", firstName + ' ' + lastName, username));
-	}
+  public String getUserId() {
+    return userId;
+  }
 
-	/**
-	 * Get user by username
-	 * 
-	 * @param username to check uniqueness
-	 * @return username
-	 */
-	public String getUserByUsername(String username) {
-		if (username != this.username) {
-			System.out.println("Usuário não encontrado");
-		} else {
-			System.out.println(String.format("Usuário %s encontrado!", username));
-		}
-		return username;
-	}
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
 
-	/**
-	 * Get user by id
-	 * 
-	 * @param userId to check uniqueness
-	 * @return username
-	 */
-	public String getUserById(String userId) {
-		if (userId != this.userId) {
-			System.out.println("Usuário não encontrado");
-		} else {
-			System.out.println(String.format("Usuário %s encontrado!", username));
-		}
-		return username;
-	}
+  public String getFirstName() {
+    return firstName;
+  }
 
-	/**
-	 * Edit user
-	 * 
-	 * @param userId    to check uniqueness
-	 * @param firstName to update user first name
-	 * @param lastName  to update user last name
-	 * @param birthday  to update user birthday
-	 * @param email     to update user email
-	 * @param username  to update user username
-	 * @param password  to update user password
-	 * @param image     to update user image profile avatar
-	 * @param enable    to update user active status
-	 */
-	public void editUser(String userId, String firstName, String lastName, LocalDate birthday, String username,
-			String email, String password, String image, Boolean enable) {
-		if (userId != this.userId) {
-			System.out.println("Usuário não encontrado");
-		} else {
-			System.out.println(String.format("%s, com o username %s, foi alterado com sucesso!",
-					firstName + ' ' + lastName, username));
-		}
-	}
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-	/**
-	 * Edit user status availability in the application
-	 * 
-	 * @param userId to check uniqueness
-	 * @param enable to change user active status
-	 */
-	public void editUserStatus(String userId, Boolean enable) {
-		if (userId != this.userId) {
-			System.out.println("Usuário não encontrado");
-		} else {
-			System.out.println(String.format("%s, com o username %s, foi %s com sucesso!", firstName + ' ' + lastName,
-					username, enable ? "ativado" : "desativado"));
-		}
-	}
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public Date getBirthday() {
+    return birthday;
+  }
+
+  public void setBirthday(Date birthday) {
+    this.birthday = birthday;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public String getImage() {
+    return image;
+  }
+
+  public void setImage(String image) {
+    this.image = image;
+  }
+
+  public Boolean getEnable() {
+    return enable;
+  }
+
+  public void setEnable(Boolean enable) {
+    this.enable = enable;
+  }
+
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  public Double getHeight() {
+    return height;
+  }
+
+  public void setHeight(Double height) {
+    this.height = height;
+  }
 }

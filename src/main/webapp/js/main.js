@@ -2,9 +2,18 @@ const ajax = new XMLHttpRequest();
 const contextPath = window.location.pathname.substring(0, window.location.pathname.indexOf("/", 2));
 
 /**
- * Dashboard
+ * User
  */
-
+function getUserByUsername() {
+  ajax.open("GET", contextPath + '/user', true);
+  ajax.send();
+  ajax.onreadystatechange = function () {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      const user = JSON.parse(ajax.responseText);
+      console.log(user);
+    }
+  }
+}
 
 /**
  * Weight List
@@ -376,6 +385,9 @@ function closeModal() {
   toastMessage.style.display = 'block'
   const toast = new bootstrap.Toast(toastMessage)
   toast.show()
+  toastMessage.addEventListener('hide.bs.toast', function () {
+    toastMessage.style.display = 'none'
+  })
 }
 
 /**

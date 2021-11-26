@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: javax.servlet:javax.servlet-api:4.0.1">
+    <archive path="C:/Users/ariel/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar" />
+  </library>
+  <library name="Maven: javax.xml.ws:jaxws-api:2.3.1">
+    <archive path="C:/Users/ariel/.m2/repository/javax/xml/ws/jaxws-api/2.3.1/jaxws-api-2.3.1.jar" />
+  </library>
+  <library name="Maven: javax.xml.bind:jaxb-api:2.3.1">
+    <archive path="C:/Users/ariel/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar" />
+  </library>
+  <library name="Maven: javax.activation:javax.activation-api:1.2.0">
+    <archive path="C:/Users/ariel/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar" />
+  </library>
+  <library name="Maven: javax.xml.soap:javax.xml.soap-api:1.4.0">
+    <archive path="C:/Users/ariel/.m2/repository/javax/xml/soap/javax.xml.soap-api/1.4.0/javax.xml.soap-api-1.4.0.jar" />
+  </library>
+  <library name="Maven: javax.annotation:javax.annotation-api:1.3.2">
+    <archive path="C:/Users/ariel/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" />
+  </library>
+  <library name="Maven: javax.jws:javax.jws-api:1.1">
+    <archive path="C:/Users/ariel/.m2/repository/javax/jws/javax.jws-api/1.1/javax.jws-api-1.1.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1">
+    <archive path="C:/Users/ariel/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar" />
+  </library>
+  <library name="Maven: org.apiguardian:apiguardian-api:1.1.0">
+    <archive path="C:/Users/ariel/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar" />
+  </library>
+  <library name="Maven: org.opentest4j:opentest4j:1.2.0">
+    <archive path="C:/Users/ariel/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" />
+  </library>
+  <library name="Maven: org.junit.platform:junit-platform-commons:1.7.1">
+    <archive path="C:/Users/ariel/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1">
+    <archive path="C:/Users/ariel/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar" />
+  </library>
+  <library name="Maven: org.junit.platform:junit-platform-engine:1.7.1">
+    <archive path="C:/Users/ariel/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar" />
+  </library>
+  <library name="ojdbc11">
+    <archive path="C:/Users/ariel/Desenvolvimento/FIAP/health-track-jsp/lib/ojdbc11.jar" />
+  </library>
+  <library name="json-20210307">
+    <archive path="C:/Users/ariel/Desenvolvimento/FIAP/health-track-jsp/lib/json-20210307.jar" />
+  </library>
+  <library name="Maven: com.oracle:ojdbc11:21.3.0.0">
+    <archive path="C:/Users/ariel/.m2/repository/com/oracle/ojdbc11/21.3.0.0/ojdbc11-21.3.0.0.jar" />
+  </library>
+  <library name="Maven: com.google.code.gson:gson:2.8.9">
+    <archive path="C:/Users/ariel/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar" />
+  </library>
+</eclipse-userlibraries>
+

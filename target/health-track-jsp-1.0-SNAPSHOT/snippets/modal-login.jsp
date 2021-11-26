@@ -21,7 +21,7 @@
             <div class="modal-body" style="height: calc(100vh - 160px)">
               <h1>Login</h1>
               <p>Seja bem-vindo!</p>
-              <form action="dashboard/index.html" method="post">
+              <form id="formUser">
                 <label for="loginUser" class="form-label">Usuário</label>
                 <input
                     type="text"
@@ -55,7 +55,7 @@
                 <i class="icon icon-chevron icon-flip-y me-2"></i>
                 <span>Voltar</span>
               </button>
-              <form>
+              <form id="formAuth">
                 <label for="loginPassword" class="form-label">
                   Senha
                 </label>
@@ -69,7 +69,7 @@
             </div>
             <div class="modal-footer">
               <div class="d-grid w-100">
-                <a href="./home/" class="btn btn-secondary btn-lg">
+                <a href="./home/" form="formAuth" class="btn btn-secondary btn-lg">
                   Entrar
                 </a>
               </div>
