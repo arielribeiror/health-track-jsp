@@ -45,7 +45,9 @@ public class Activity {
         this.description = description;
     }
 
-    public String getActivityId() {
+  public Activity() {}
+
+  public String getActivityId() {
         return activityId;
     }
 

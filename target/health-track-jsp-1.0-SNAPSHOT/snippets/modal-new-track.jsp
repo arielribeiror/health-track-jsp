@@ -161,8 +161,8 @@
               <button
                   class="carousel-control-prev text-primary mb-5"
                   type="button"
+                  id="carouselNewTrackBackBtn"
                   data-bs-target="#carouselNewTrack"
-                  data-bs-slide="prev"
               >
                 <i class="icon icon-chevron icon-flip-y me-2"></i>
                 <span>Voltar</span>
@@ -181,7 +181,6 @@
               <div class="d-grid w-100">
                 <button
                     type="submit"
-                    data-bs-dismiss="modal"
                     class="btn btn-secondary btn-lg"
                     id="trackAddBtn"
                 >

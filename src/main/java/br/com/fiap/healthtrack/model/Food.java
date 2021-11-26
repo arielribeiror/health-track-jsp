@@ -43,9 +43,7 @@ public class Food {
     this.description = description;
   }
 
-  public Food() {
-
-  }
+  public Food() {}
 
   public String getFoodId() {
     return foodId;

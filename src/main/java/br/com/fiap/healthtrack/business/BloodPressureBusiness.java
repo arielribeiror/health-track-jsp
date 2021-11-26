@@ -35,16 +35,16 @@ public class BloodPressureBusiness {
 		return bloodPressureList;
 	}
 	
-	public void insert(String bloodPressureId, int systolicPressure, int diastolicPressure, java.sql.Date actualAt, String userId) {
+	public void insert(BloodPressure pressure, String userId) {
 		try {
 			String query = "INSERT INTO T_BLOOD_PRESSURE (BLOOD_ID, SYSTOLIC_PRESSURE, DIASTOLIC_PRESSURE, ACTUAL_AT, T_USER_USER_ID) VALUES (?, ?, ?, ?, ?)";
 			PreparedStatement stmt = connectionManager
 				.getConnection()
 				.prepareStatement(query);
-			stmt.setString(1, bloodPressureId);
-			stmt.setInt(2, systolicPressure);
-			stmt.setInt(3, diastolicPressure);
-			stmt.setDate(4, actualAt);
+			stmt.setString(1, pressure.getBloodPressureId());
+			stmt.setInt(2, pressure.getSystolicPressure());
+			stmt.setInt(3, pressure.getDiastolicPressure());
+			stmt.setDate(4, pressure.getActualAt());
 			stmt.setString(5, userId);
 			stmt.executeQuery();
 		} catch (SQLException e) {

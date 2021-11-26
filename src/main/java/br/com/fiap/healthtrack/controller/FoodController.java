@@ -2,6 +2,7 @@ package br.com.fiap.healthtrack.controller;
 
 import br.com.fiap.healthtrack.auth.User;
 import br.com.fiap.healthtrack.business.FoodBusiness;
+import br.com.fiap.healthtrack.business.FoodTypeBusiness;
 import br.com.fiap.healthtrack.model.Food;
 import br.com.fiap.healthtrack.util.UuidGenerator;
 import com.google.gson.Gson;
@@ -43,7 +44,9 @@ public class FoodController extends HttpServlet {
     User user = new User();
 
     FoodBusiness foodBusiness = new FoodBusiness();
+    FoodTypeBusiness foodTypeBusiness = new FoodTypeBusiness();
     foodBusiness.insert(foodBean, "0375dabf-2a75-4083-90df-c8649b77d861");
+    foodTypeBusiness.insertJoinTable(foodBean.getFoodId(), foodBean.getType());
 
     request.setAttribute("foodItem", foodBean);
 

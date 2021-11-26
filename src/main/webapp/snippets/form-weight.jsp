@@ -4,7 +4,7 @@
     <i class="icon icon-body-weight icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Peso</span>
   </div>
-  <form id="weightForm">
+  <form id="weightForm" class="needs-validation" novalidate>
     <div class="mb-3">
       <label for="weight" class="form-label">
         Digite o peso em Kg
@@ -16,7 +16,11 @@
           name="weight"
           class="form-control form-control-lg"
           placeholder="Digite seu peso atual"
+          required
       />
+      <div class="invalid-feedback">
+        Digite seu peso atual
+      </div>
     </div>
     <div class="mb-3">
       <label for="weightDate" class="form-label">
@@ -28,7 +32,11 @@
           name="weightDate"
           class="form-control form-control-lg"
           placeholder="Selecione a data"
+          required
       />
+      <div class="invalid-feedback">
+        Selecione a data
+      </div>
     </div>
   </form>
 </div>

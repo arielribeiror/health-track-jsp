@@ -4,7 +4,7 @@
     <i class="icon icon-flash icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Exercício Físico</span>
   </div>
-  <form id="activityForm">
+  <form id="activityForm" class="needs-validation" novalidate>
     <div class="mb-3">
       <label for="caloricLoss" class="form-label">
         Gasto calórico
@@ -15,7 +15,11 @@
           name="caloricLoss"
           class="form-control form-control-lg"
           placeholder="Digite as calorias gastas"
+          required
       />
+      <div class="invalid-feedback">
+        Digite as calorias gastas
+      </div>
     </div>
     <div class="mb-3">
       <label for="activityType" class="form-label">
@@ -25,9 +29,13 @@
           id="activityType"
           name="activityType"
           class="form-select form-select-lg"
+          required
       >
         <option selected>Selecione o tipo de atividade</option>
       </select>
+      <div class="invalid-feedback">
+        Selecione o tipo de atividade
+      </div>
     </div>
     <div class="mb-3">
       <label for="activityDescription" class="form-label">
@@ -50,7 +58,11 @@
           name="activityDate"
           class="form-control form-control-lg"
           placeholder="Selecione a data"
+          required
       />
+      <div class="invalid-feedback">
+        Selecione a data
+      </div>
     </div>
   </form>
 </div>

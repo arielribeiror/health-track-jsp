@@ -4,10 +4,10 @@
     <i class="icon icon-heart-beats icon-36 me-4"></i>
     <span class="fs-3 fw-bold">Pressão Arterial</span>
   </div>
-  <form id="pressureForm">
+  <form id="pressureForm" class="needs-validation" novalidate>
     <div class="mb-3">
       <label for="systolic" class="form-label">
-        Pressão Sistólica
+        Pressão Sistólica (2 dígitos)
       </label>
       <input
           type="number"
@@ -15,11 +15,15 @@
           name="systolic"
           class="form-control form-control-lg"
           placeholder="Digite a pressão sistólica"
+          required
       />
+      <div class="invalid-feedback">
+        Digite a pressão sistólica
+      </div>
     </div>
     <div class="mb-3">
       <label for="diastolic" class="form-label">
-        Pressão Diastólica
+        Pressão Diastólica (2 dígitos)
       </label>
       <input
           type="number"
@@ -27,7 +31,11 @@
           name="diastolic"
           class="form-control form-control-lg"
           placeholder="Digite a pressão diastólica"
+          required
       />
+      <div class="invalid-feedback">
+        Digite a pressão diastólica
+      </div>
     </div>
     <div class="mb-3">
       <label for="pressureDate" class="form-label">
@@ -39,7 +47,11 @@
           name="pressureDate"
           class="form-control form-control-lg"
           placeholder="Selecione a data"
+          required
       />
+      <div class="invalid-feedback">
+        Selecione a data
+      </div>
     </div>
   </form>
 </div>

@@ -140,7 +140,7 @@ function getPressureList() {
     >
       <div class="d-flex flex-column w-50">
         <div class="d-flex align-items-baseline">
-          <span class="fs-2 fw-bold">${pressureItem.systolicPressure}0/${pressureItem.diastolicPressure}0</span>
+          <span class="fs-2 fw-bold">${pressureItem.systolicPressure}/${pressureItem.diastolicPressure}</span>
           <span class="small ms-1">mmHg</span>
         </div>
       </div>
@@ -251,14 +251,30 @@ for (const trackListOption of trackListOptions) {
   })
 }
 
-const newTrackModal = document.querySelector('#newTrackModal')
-newTrackModal.addEventListener('hidden.bs.modal', function (event) {
+const newTrackModalEl = document.querySelector('#newTrackModal')
+const newTrackModal = new bootstrap.Modal(document.querySelector('#newTrackModal'))
+const carouselNewTrackBackBtn = document.querySelector('#carouselNewTrackBackBtn')
+
+const forms = document.querySelectorAll('.needs-validation')
+
+function resetForms() {
   const trackTypeForm = document.querySelector('#trackTypeForm')
-  trackTypeForm.reset()
   const carouselNewTrack = document.querySelector('#carouselNewTrack')
   const carousel = new bootstrap.Carousel(carouselNewTrack);
   carousel.to(0)
+  trackTypeForm.reset()
+  forms.forEach(form => {
+    form.reset()
+  })
   newTrackCarouselNextBtn.disabled = true
+}
+
+newTrackModalEl.addEventListener('hidden.bs.modal', function (event) {
+  resetForms();
+})
+
+carouselNewTrackBackBtn.addEventListener('click', function () {
+  resetForms();
 })
 
 /**
@@ -308,6 +324,9 @@ const trackAddBtn = document.querySelector('#trackAddBtn')
 const toastMessage = document.querySelector('#successToast')
 toastMessage.style.display = 'none'
 trackAddBtn.addEventListener('click', function () {
+  forms.forEach(form => {
+    form.classList.add('was-validated')
+  })
   for (const trackListOption of trackListOptions) {
     if (trackListOption.checked) {
       switch (trackListOption.id) {
@@ -326,10 +345,6 @@ trackAddBtn.addEventListener('click', function () {
       }
     }
   }
-
-  toastMessage.style.display = 'block'
-  const toast = new bootstrap.Toast(toastMessage)
-  toast.show()
 })
 
 /**
@@ -356,6 +371,13 @@ function jsonRequestHeaders() {
   ajax.setRequestHeader("Content-type", "application/json");
 }
 
+function closeModal() {
+  newTrackModal.hide()
+  toastMessage.style.display = 'block'
+  const toast = new bootstrap.Toast(toastMessage)
+  toast.show()
+}
+
 /**
  * New Weight Track (POST)
  */
@@ -370,6 +392,7 @@ function postWeight() {
     if (ajax.readyState === 4 && ajax.status === 200) {
       const weightItem = JSON.parse(ajax.responseText)
       console.log(weightItem)
+      closeModal();
       getWeightList()
     }
   }
@@ -389,6 +412,7 @@ function postFood() {
     if (ajax.readyState === 4 && ajax.status === 200) {
       const foodItem = JSON.parse(ajax.responseText)
       console.log(foodItem)
+      closeModal();
       getFoodList()
     }
   }
@@ -408,6 +432,7 @@ function postPressure() {
     if (ajax.readyState === 4 && ajax.status === 200) {
       const pressureItem = JSON.parse(ajax.responseText)
       console.log(pressureItem)
+      closeModal();
       getPressureList()
     }
   }
@@ -427,6 +452,7 @@ function postActivity() {
     if (ajax.readyState === 4 && ajax.status === 200) {
       const activityItem = JSON.parse(ajax.responseText)
       console.log(activityItem)
+      closeModal();
       getActivityList()
     }
   }

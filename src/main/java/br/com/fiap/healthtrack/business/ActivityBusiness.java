@@ -37,16 +37,16 @@ public class ActivityBusiness {
 		return activityList;
 	}
 	
-	public void insert(String activityId, int caloricLoss, java.sql.Date actualAt, String description, String userId) {
+	public void insert(Activity activity, String userId) {
 		try {
 			String query = "INSERT INTO T_ACTIVITY (ACTIVITY_ID, CALORIC_LOSS, ACTUAL_AT, DESCRIPTION, T_USER_USER_ID) VALUES (?, ?, ?, ?, ?)";
 			PreparedStatement stmt = connectionManager
 				.getConnection()
 				.prepareStatement(query);
-			stmt.setString(1, activityId);
-			stmt.setInt(2, caloricLoss);
-			stmt.setDate(3, actualAt);
-			stmt.setString(4, description);
+			stmt.setString(1, activity.getActivityId());
+			stmt.setInt(2, activity.getCaloricLoss());
+			stmt.setDate(3, activity.getActualAt());
+			stmt.setString(4, activity.getDescription());
 			stmt.setString(5, userId);
 			stmt.executeQuery();
 		} catch (SQLException e) {

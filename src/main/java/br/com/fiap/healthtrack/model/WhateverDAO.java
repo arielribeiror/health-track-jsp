@@ -93,16 +93,16 @@ public class WhateverDAO {
     Calendar calendar = Calendar.getInstance();
     java.util.Date currentDate = calendar.getTime();
     java.sql.Date date = new java.sql.Date(currentDate.getTime());
-    activityBusiness.insert("a6ef9146-08d0-4ab6-af17-59488419dc89", 275, date, "Treino membros superiores",
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    activityBusiness.insert("62b712fc-b30d-40c0-bb4a-9e6090496cfb", 120, date, "Caminhada rápida pós expediente",
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    activityBusiness.insert("1fd78e56-a6b7-4dbb-9c04-85c6851d9375", 330, date, "Corrida pós almoço",
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    activityBusiness.insert("0bcdc11b-02d0-4f96-ab44-82b80240c3ae", 275, date, "Nado costas matinal",
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    activityBusiness.insert("28e2ac85-4259-413c-b9cd-d784a1de0864", 100, date, "Caminhada",
-        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    activityBusiness.insert("a6ef9146-08d0-4ab6-af17-59488419dc89", 275, date, "Treino membros superiores",
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    activityBusiness.insert("62b712fc-b30d-40c0-bb4a-9e6090496cfb", 120, date, "Caminhada rápida pós expediente",
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    activityBusiness.insert("1fd78e56-a6b7-4dbb-9c04-85c6851d9375", 330, date, "Corrida pós almoço",
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    activityBusiness.insert("0bcdc11b-02d0-4f96-ab44-82b80240c3ae", 275, date, "Nado costas matinal",
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    activityBusiness.insert("28e2ac85-4259-413c-b9cd-d784a1de0864", 100, date, "Caminhada",
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
   }
 
   public static void insertActivityType(ActivityTypeBusiness activityTypeBusiness) {
@@ -124,16 +124,16 @@ public class WhateverDAO {
     Calendar calendar = Calendar.getInstance();
     java.util.Date currentDate = calendar.getTime();
     java.sql.Date date = new java.sql.Date(currentDate.getTime());
-    bloodPressureBusiness.insert("a7ef5e7b-4a48-4d09-ab90-001286b71000", 10, 7, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    bloodPressureBusiness.insert("f857c52a-755e-45f4-908e-aa3fcf8a1acf", 10, 6, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    bloodPressureBusiness.insert("74adc025-9456-4afb-a139-eeb61a28fa82", 11, 7, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    bloodPressureBusiness.insert("86fc0548-4e4a-4668-a7ea-e545916e5824", 12, 8, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
-    bloodPressureBusiness.insert("0863268f-391f-44e2-aa52-119bdbae99ba", 10, 7, date,
-        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    bloodPressureBusiness.insert("a7ef5e7b-4a48-4d09-ab90-001286b71000", 10, 7, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    bloodPressureBusiness.insert("f857c52a-755e-45f4-908e-aa3fcf8a1acf", 10, 6, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    bloodPressureBusiness.insert("74adc025-9456-4afb-a139-eeb61a28fa82", 11, 7, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    bloodPressureBusiness.insert("86fc0548-4e4a-4668-a7ea-e545916e5824", 12, 8, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
+//    bloodPressureBusiness.insert("0863268f-391f-44e2-aa52-119bdbae99ba", 10, 7, date,
+//        "0375dabf-2a75-4083-90df-c8649b77d861");
   }
 
   @SuppressWarnings("unused")

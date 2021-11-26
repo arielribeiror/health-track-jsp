@@ -30,7 +30,7 @@ public class BloodPressure {
    * @param bloodPressureId   to uniqueness
    * @param systolicPressure  to user systolic pressure
    * @param diastolicPressure to user diastolic pressure
-   * @param actualAt2         to date time register
+   * @param actualAt         to date time register
    */
   public BloodPressure(String bloodPressureId, int systolicPressure, int diastolicPressure, Date actualAt) {
     this.bloodPressureId = bloodPressureId;
@@ -39,41 +39,38 @@ public class BloodPressure {
     this.actualAt = actualAt;
   }
 
-  /**
-   * Get blood pressure
-   */
-  public void addBloodPressure() {
-    System.out.println(String.format("Pressão sanguínea, de %s por %s, foi adicionada com sucesso!", systolicPressure, diastolicPressure));
+  public BloodPressure() {}
+
+  public String getBloodPressureId() {
+    return bloodPressureId;
   }
 
-  /**
-   * Get blood pressure by id
-   *
-   * @param bloodPressureId to check uniqueness
-   * @return systolicPressure/diastolicPressure
-   */
-  public String getBloodPressureById(String bloodPressureId) {
-    if (bloodPressureId != this.bloodPressureId) {
-      System.out.println("Pressão sanguínea não encontrada");
-    } else {
-      System.out.println(String.format("Pressão sanguínea, de %s por %s, encontrada!", systolicPressure, diastolicPressure));
-    }
-    return systolicPressure + "/" + diastolicPressure;
+  public void setBloodPressureId(String bloodPressureId) {
+    this.bloodPressureId = bloodPressureId;
   }
 
-  /**
-   * Edit blood pressure
-   *
-   * @param bloodPressureId   to check uniqueness
-   * @param systolicPressure  to user blood pressure
-   * @param diastolicPressure to user blood pressure
-   */
-  public void editBloodPressure(String bloodPressureId, int systolicPressure, int diastolicPressure) {
-    if (bloodPressureId != this.bloodPressureId) {
-      System.out.println("Pressão sanguínea não encontrada");
-    } else {
-      System.out.println("Pressão sanguínea alterada com sucesso!");
-    }
+  public int getSystolicPressure() {
+    return systolicPressure;
+  }
+
+  public void setSystolicPressure(int systolicPressure) {
+    this.systolicPressure = systolicPressure;
+  }
+
+  public int getDiastolicPressure() {
+    return diastolicPressure;
+  }
+
+  public void setDiastolicPressure(int diastolicPressure) {
+    this.diastolicPressure = diastolicPressure;
+  }
+
+  public Date getActualAt() {
+    return actualAt;
+  }
+
+  public void setActualAt(Date actualAt) {
+    this.actualAt = actualAt;
   }
 
   @Override
